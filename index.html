@@ -9,12 +9,19 @@
     <meta name="author" content="">
 
     <title>HTS Engineering Group</title>
-
+    <link rel="icon" type="images/HTS-Group-Square.jpg"
+         href="images/HTS-Group-Square.jpg" />
 <!-- Main css -->
 <link href="css/style.css" rel="stylesheet">
 <!-- Bootstrap core CSS -->
 <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-
+<style>
+@media (max-width:729px) {
+img#optionalstuff {
+  display: none;
+}
+}
+</style>
   </head>
 
   <body>
@@ -79,7 +86,7 @@
             <p class="tagline">HTS GROUP Specialise in delivering Electrical, Control and Instrumentation (EC&I) systems.
 Our services are focused on Instrumented Control and Instrumented Safety systems.</p>
         </div>
-        <div class="img-holder mt-3"><img src="css/htslinesim.png" alt="phone" class="img-fluid" usemap="#image-map">
+        <div class="img-holder mt-3"><img id="optionalstuff" src="css/htslinesim.png" alt="phone" class="img-fluid" usemap="#image-map">
           <map name="image-map">
                 <area target="" alt="" title="" href="Safety.html" coords="86,140,382,198" shape="rect">
                 <area target="" alt="" title="" href="Controls.html" coords="420,140,680,194" shape="0">

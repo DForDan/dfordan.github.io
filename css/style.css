@@ -522,6 +522,8 @@ header {
 /*  PRICING
 ----------------------*/
 
+
+
 @media (max-width:992px) {
     .card-deck {
         -ms-flex-direction: column;
