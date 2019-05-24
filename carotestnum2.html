@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Test</title>
+
+    <style>
+    body {
+	margin: 0;
+	font-family: 'Roboto', sans-serif;
+	font-size: 16px;
+}
+
+h1 {
+  text-align: center;
+  margin-bottom: 1.5em;
+}
+
+h2 {
+	text-align: center;
+	color: #555;
+  margin-bottom: 0;
+}
+
+// Carousel configuration parameters
+$item-width: 40%; // Now we can use percentages!
+$item-separation: 0px; // This now is set with Js
+$viewer-distance: 500px;
+
+.carousel {
+	padding: 20px;
+
+	perspective: $viewer-distance;
+	overflow: hidden;
+
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	> * {
+		flex: 0 0 auto;
+	}
+
+	figure {
+		margin: 0;
+
+		width: $item-width;
+		transform-style: preserve-3d;
+		transition: transform 0.5s;
+
+		img {
+			width: 100%;
+			box-sizing: border-box;
+			padding: 0 $item-separation / 2;
+
+			&:not(:first-of-type) {
+				position: absolute;
+				left: 0;
+				top: 0;
+			}
+		}
+	}
+
+	nav {
+		display: flex;
+		justify-content: center;
+		margin: 20px 0 0;
+
+		button {
+			flex: 0 0 auto;
+			margin: 0 5px;
+
+			cursor: pointer;
+
+			color: #333;
+			background: none;
+			border: 1px solid;
+			letter-spacing: 1px;
+			padding: 5px 10px;
+		}
+	}
+
+}
+    </style>
+  </head>
+  <body>
+
+    <h1>3D Rotating Carousel Examples</h1>
+
+    <h2>Three images</h2>
+    <div class="carousel">
+    	<figure>
+    		<img src="https://source.unsplash.com/EbuaKnSm8Zw/800x533" alt="">
+    		<img src="https://source.unsplash.com/kG38b7CFzTY/800x533" alt="">
+    		<img src="https://source.unsplash.com/nvzvOPQW0gc/800x533" alt="">
+    	</figure>
+    	<nav>
+    		<button class="nav prev">Prev</button>
+    		<button class="nav next">Next</button>
+    	</nav>
+    </div>
+
+    <h2>Four images</h2>
+    <div class="carousel">
+    	<figure>
+        <img src="https://source.unsplash.com/kG38b7CFzTY/800x533" alt="">
+    		<img src="https://source.unsplash.com/EbuaKnSm8Zw/800x533" alt="">
+    		<img src="https://source.unsplash.com/nvzvOPQW0gc/800x533" alt="">
+    		<img src="https://source.unsplash.com/mCg0ZgD7BgU/800x533" alt="">
+    	</figure>
+    	<nav>
+    		<button class="nav prev">Prev</button>
+    		<button class="nav next">Next</button>
+    	</nav>
+    </div>
+
+    <h2>Eight images</h2>
+    <div class="carousel">
+    	<figure>
+        <img src="https://source.unsplash.com/nvzvOPQW0gc/800x533" alt="">
+    		<img src="https://source.unsplash.com/EbuaKnSm8Zw/800x533" alt="">
+    		<img src="https://source.unsplash.com/kG38b7CFzTY/800x533" alt="">
+    		<img src="https://source.unsplash.com/mCg0ZgD7BgU/800x533" alt="">
+    		<img src="https://source.unsplash.com/VkwRmha1_tI/800x533" alt="">
+    		<img src="https://source.unsplash.com/1FWICvPQdkY/800x533" alt="">
+    		<img src="https://source.unsplash.com/bjhrzvzZeq4/800x533" alt="">
+    		<img src="https://source.unsplash.com/7mUXaBBrhoA/800x533" alt="">
+    	</figure>
+    	<nav>
+    		<button class="nav prev">Prev</button>
+    		<button class="nav next">Next</button>
+    	</nav>
+    </div>
+
+    <h2>Eight images, with 20px gap</h2>
+    <div class="carousel" data-gap="20">
+    	<figure>
+        <img src="https://source.unsplash.com/mCg0ZgD7BgU/800x533" alt="">
+    		<img src="https://source.unsplash.com/EbuaKnSm8Zw/800x533" alt="">
+    		<img src="https://source.unsplash.com/kG38b7CFzTY/800x533" alt="">
+    		<img src="https://source.unsplash.com/nvzvOPQW0gc/800x533" alt="">
+    		<img src="https://source.unsplash.com/VkwRmha1_tI/800x533" alt="">
+    		<img src="https://source.unsplash.com/1FWICvPQdkY/800x533" alt="">
+    		<img src="https://source.unsplash.com/bjhrzvzZeq4/800x533" alt="">
+    		<img src="https://source.unsplash.com/7mUXaBBrhoA/800x533" alt="">
+    	</figure>
+    	<nav>
+    		<button class="nav prev">Prev</button>
+    		<button class="nav next">Next</button>
+    	</nav>
+    </div>
+
+    <h2>Eight images, with 80px gap</h2>
+    <div class="carousel" data-gap="80">
+    	<figure>
+        <img src="https://source.unsplash.com/VkwRmha1_tI/800x533" alt="">
+    		<img src="https://source.unsplash.com/EbuaKnSm8Zw/800x533" alt="">
+    		<img src="https://source.unsplash.com/kG38b7CFzTY/800x533" alt="">
+    		<img src="https://source.unsplash.com/nvzvOPQW0gc/800x533" alt="">
+    		<img src="https://source.unsplash.com/mCg0ZgD7BgU/800x533" alt="">
+    		<img src="https://source.unsplash.com/1FWICvPQdkY/800x533" alt="">
+    		<img src="https://source.unsplash.com/bjhrzvzZeq4/800x533" alt="">
+    		<img src="https://source.unsplash.com/7mUXaBBrhoA/800x533" alt="">
+    	</figure>
+    	<nav>
+    		<button class="nav prev">Prev</button>
+    		<button class="nav next">Next</button>
+    	</nav>
+    </div>
+
+    <h2>Hidden backfaces</h2>
+    <div class="carousel" data-gap="20" data-bfc>
+    	<figure>
+        <img src="https://source.unsplash.com/bjhrzvzZeq4/800x533" alt="">
+    		<img src="https://source.unsplash.com/EbuaKnSm8Zw/800x533" alt="">
+    		<img src="https://source.unsplash.com/kG38b7CFzTY/800x533" alt="">
+    		<img src="https://source.unsplash.com/nvzvOPQW0gc/800x533" alt="">
+    		<img src="https://source.unsplash.com/mCg0ZgD7BgU/800x533" alt="">
+    		<img src="https://source.unsplash.com/VkwRmha1_tI/800x533" alt="">
+    		<img src="https://source.unsplash.com/1FWICvPQdkY/800x533" alt="">
+    		<img src="https://source.unsplash.com/7mUXaBBrhoA/800x533" alt="">
+    	</figure>
+    	<nav>
+    		<button class="nav prev">Prev</button>
+    		<button class="nav next">Next</button>
+    	</nav>
+    </div>
+
+
+
+<script type="text/javascript" src="caro.js">
+
+</script>
+  </body>
+</html>
