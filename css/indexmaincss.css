@@ -12,7 +12,7 @@ font-family: helvetica;
 }
 
 .bg-light2 {
-background-color: #306d9f;
+background-color: #1F487C;
 }
 .linkblack {
 color: #000;
@@ -251,6 +251,17 @@ opacity: 1;
 visibility: visible;
 }
 
+
+
+
+/* .whitelink a, a:hover, a:active, a:visited {
+  color: white; } */
+
+.greyb {
+  background-color: #D3D3D3;
+}
+
+
 .nodec {
 font-family: helvetica;
 font-weight: 400;
@@ -261,7 +272,7 @@ font-weight: 400;
 height: 100% ;
 width: 100px;
 position: fixed;
-z-index: 99999;
+z-index: 99998;
 top: 0;
 right: 0;
 /* background-color: #111; */
@@ -283,7 +294,9 @@ text-align: left;
 cursor: pointer;
 outline: none;
 }
-
+.zindex {
+  z-index: 99999;
+}
 /* On mouse-over */
 .sidenav a:hover, .dropdown-btn:hover {
 color: #286090;
@@ -331,13 +344,30 @@ padding-right: 8px;
 .sidenav {padding-top: 15px;}
 .sidenav a {font-size: 18px;}
 }
-.mainNav2 {
+/* .mainNav2 {
   -webkit-transition: padding-top .3s,padding-bottom .3s;
   -moz-transition: padding-top .3s,padding-bottom .3s;
   transition: padding-top .3s,padding-bottom .3s;
   border: none;
   background-color: #212529;
-}
+  #mainNav{
+    background-color:#212529
+  } */
+
+
 .cycle {
   margin-top: 30px !important;
+}
+.linkblack2 {
+  text-align: left;
+}
+.center {
+  text-align: center;
+}
+
+section#sissuite.py-5.expad {
+  padding: 230px 50px 180px 50px !important;
+}
+section#atex.py-5.expad {
+  padding: 230px 50px 180px 50px !important;
 }
