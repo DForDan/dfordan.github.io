@@ -4,16 +4,15 @@
  *
  * Licensed under the MIT license.
  * http://www.opensource.org/licenses/mit-license.php
- * 
- * Copyright 2018, COIDEA
- * https://coidea.website
+ *
+
  */
 
   $('.slideshow').imagesLoaded({ background: true })
   .done( function() {
     // hide loader
     $('.loader').addClass('is-loaded');
-    
+
     // init variables
     var slideshow = $(".slideshow"),
       navigation = $(".navigation"),
@@ -26,6 +25,7 @@
     $('.headline').each(function() {
       $(this).html($(this).text().replace(/([^\x00-\x80]|\w)/g, "<span class='letter'>$&</span>"));
     });
+
 
     // prepare navigation and set navigation items on the right place
     navigationItem.each(function(index, elem) {
@@ -41,7 +41,7 @@
         rotation: -90 - (index * 360 / navigationItem.length),
       });
     });
-    
+
     // set tween values
     function setTweenValues() {
       rotation = Number($(this).find('.rotate-holder').text());
